@@ -1,3 +1,21 @@
+class GitHubWidget {
+    constructor(options) {
+        this.container = options.container;
+    }
+
+    init() {
+        this.container.innerHTML = `
+            <input type="text" name="username" class="username">
+            <button type="submit">Submit</button>
+        `;
+    }
+}
+
+const widget = new GitHubWidget({
+    container: document.querySelector("form")
+})
+widget.init();
+
 const form = document.querySelector("form");
 const name = document.querySelector(".username");
 const main = document.querySelector(".maincontainer");
